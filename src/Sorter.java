@@ -25,7 +25,12 @@ public class Sorter {
             arr[min_idx] = arr[i];
             arr[i] = temp;
             }
-        }
+    }
+
+    public void sort(int arr[]){
+        selectionSort(arr);
+
+    }
 
 
 
