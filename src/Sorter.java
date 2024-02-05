@@ -32,4 +32,7 @@ public class Sorter {
             arr[j + 1] = key;
         }
     }
+    void sort(int arr[]){
+        insertionSort(arr);
+    }
 }
