@@ -1,13 +1,6 @@
 import java.io.*;
 
 public class Sorter {
-    public static void main(String[] args) {
-
-    }
-
-    // Java program for implementation of Selection Sort
-
-
     public void selectionSort(int arr[]) {
         int n = arr.length;
 
@@ -25,14 +18,25 @@ public class Sorter {
             arr[min_idx] = arr[i];
             arr[i] = temp;
             }
-    }
+        }
+    void insertionSort(int arr[]) {
+        int n = arr.length;
+        for (int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i - 1;
 
-    public void sort(int arr[]){
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
+    }
+    void sort(int arr[]){
+        insertionSort(arr);
+    }
+    void sort2(int arr[]){
         selectionSort(arr);
 
     }
-
-
-
-
 }
